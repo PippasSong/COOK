@@ -2,36 +2,108 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>COOK</title>
+    <!--제이쿼리 이용해 요리 이름을 웹 제목으로-->
+    <title>$(h3.title).text</title>
     <style>
-      #grid1{
-        display: grid;
+      /*사진 그리드*/
+      #grid1 {
+        display : grid;
         /*margin-left: 200px;*/
-        align-content: center;
-        justify-content: center;
+        align-content : center;
+        justify-content : center;
       }
+      /*음식 이름 그리드 설정*/
       #grid2 {
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        grid-template-columns: 400px 400px;
+        display : grid;
+        align-content : center;
+        justify-content : center;
       }
-      #grid2 h4{
-        border-right: 1px solid gray;
-        border-left: 1px solid gray;
-        border-bottom: 1px solid gray;
-        margin-top: 0px;
-        text-align: center;
+      /*조리시간과 양 설명하는 그리드*/
+      #grid3 {
+        display : grid;
+        align-content : center;
+        justify-content : center;
+        grid-template-columns : 400px 400px;
+      }
+
+
+      /*그리드 안의 h4태그 중 time class의 글자설정과 테두리 설정*/
+      #grid3 h4.time{
+        /*border-right : 1px solid gray;
+        border-left : 1px solid gray;
+        border-bottom : 1px solid gray;*/
+        margin-top : 0px;
+        text-align : center;
+      }
+      /*조리과정 설명하는 그리드*/
+      #grid4 {
+        display : grid;
+        align-content : center;
+        border : 5px solid gray;
+        width : 750px;
+        margin : auto;
+      }
+      /*li태그의 위치조정*/
+      li.order{
+        padding : 5px;
+      }
+      /*재료 그리드 설정*/
+      #grid5 {
+        display : grid;
+        align-content : center;
+        border : 5px solid gray;
+        width : 600px;
+        margin : auto;
+        margin-bottom : 20px;
+        padding-right : 150px;
+        padding-bottom: 18px;
+      }
+      .amount {
+        float : right;
+      }
+      .ingre{
+        border-bottom : 2px solid #E6E6E6;
       }
     </style>
   </head>
   <body>
-    <pic id="grid1">
-      <img src="1.jpg"  style="width: 800px">
+    <pic id = "grid1">
+      <!--사진 크기 줄이자-->
+      <img src = "1.jpg"  style = "width : 800px">
     </pic>
-    <div id="grid2">
-      <h4>2인분</h4>
-      <h4>30분</h4>
+    <div id = "grid2">
+      <h3 class = "title">숙주 두루치기</h3>
     </div>
+    <div id = "grid3">
+      <h4 class = "time"><img src = "person.png" style="width : 15px"> 2인분</h4>
+      <h4 class = "time"><img src = "time.png" style="width : 15px"> 30분</h4>
+    </div>
+    <ul id = "grid5">
+      <h3>재료</h3>
+      <li class = "ingre">돼지고기<span class = "amount">500g</span></li>
+      <li class = "ingre">숙주<span class = "amount" >250g</span></li>
+      <li class = "ingre">대파<span class = "amount">1줌</span></li>
+      <h4>고기밑간</h4>
+      <li class = "ingre">진간장<span class = "amount">1T</span></li>
+      <li class = "ingre">맛술<span class = "amount">1T</span></li>
+      <li class = "ingre">후추조금
+      <li class = "ingre">소금<span class = "amount">0.5T</span></li>
+      <h4>양념</h4>
+      <li class = "ingre">고추장<span class = "amount">2T</span></li>
+      <li class = "ingre">고춧가루<span class = "amount">1T</span></li>
+      <li class = "ingre">청양고추<span class = "amount">1개</span></li>
+      <li class = "ingre">다진마늘<span class = "amount">0.5T</span></li>
+      <li class = "ingre">올리고당<span class = "amount">1T</span></li>
+      <li class = "ingre">참기름<span class = "amount">1T</span></li>
+      <li class = "ingre">설탕<span class = "amount">1T</span></li>
+    </ul>
+    <ol id = "grid4">
+      <li class = "order">고기 밑간하기</li>
+      <li class = "order">양념장 만들어 숙성시키기</li>
+      <li class = "order">대파를 기름에 볶아 파기름 만들기</li>
+      <li class = "order">돼지고기를 파기름에 볶기</li>
+      <li class = "order">돼지고기를 반 쯤 익힌 후 양념 절반 넣고 볶기</li>
+      <li class = "order">돼지고기가 거의 다 익으면 남은 양념과 숙주를 넣고 강불에서 볶기</li>
+    </ol>
   </body>
 </html>
